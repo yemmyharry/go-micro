@@ -42,7 +42,7 @@ func (app *Config) writeJSON(w http.ResponseWriter, status int, data any, header
 	w.WriteHeader(status)
 	_, err = w.Write(out)
 	if err != nil {
-		return nil
+		return err
 	}
 
 	return nil
